@@ -18,9 +18,9 @@ public class AppController {
     @RequestMapping("/")
     public String viewHomePage(Model model){
 
-        List<Product> productList = productService.listAll();
+//        List<Product> productList = productService.listAll();
 
-        model.addAttribute("productList", productList);
+//        model.addAttribute("productList", productList);
 
         return "index";
     }
