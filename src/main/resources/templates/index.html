@@ -5,27 +5,44 @@
     <title>Product Manager</title>
 </head>
 <body>
-<table style="width:100%" border="1">
-    <thead>
-        <tr>
-            <th>Product ID</th>
-            <th>Name</th>
-            <th>Brand</th>
-            <th>Made In</th>
-            <th>Price</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr th:each="product : ${productList}">
-            <td th:text="${product.id}">Product ID</td>
-            <td th:text="${product.name}">Name</td>
-            <td th:text="${product.brand}">Brand</td>
-            <td th:text="${product.madein}">Made In</td>
-            <td th:text="${product.price}">Price</td>
-        </tr>
-    </tbody>
-</table>
+<!--<table style="width:100%" border="1">-->
+<!--    <thead>-->
+<!--        <tr>-->
+<!--            <th>Product ID</th>-->
+<!--            <th>Name</th>-->
+<!--            <th>Brand</th>-->
+<!--            <th>Made In</th>-->
+<!--            <th>Price</th>-->
+<!--            <th>Action</th>-->
+<!--        </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--        <tr th:each="product : ${productList}">-->
+<!--            <td th:text="${product.id}">Product ID</td>-->
+<!--            <td th:text="${product.name}">Name</td>-->
+<!--            <td th:text="${product.brand}">Brand</td>-->
+<!--            <td th:text="${product.madein}">Made In</td>-->
+<!--            <td th:text="${product.price}">Price</td>-->
+<!--        </tr>-->
+<!--    </tbody>-->
+<!--</table>-->
 
+<table style="width:100%" border="1">
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+    </tr>
+</table>
 </body>
 </html>
