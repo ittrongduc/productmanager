@@ -7,15 +7,15 @@ import org.springframework.context.annotation.Configuration;
 import javax.sql.DataSource;
 
 
-@Configuration
-public class DatasourceConfig {
-    @Bean
-    public DataSource datasource() {
-        return DataSourceBuilder.create()
-                .driverClassName("com.mysql.cj.jdbc.Driver")
-                .url("jdbc:mysql://localhost:3306/salesdb")
-                .username("root")
-                .password("")
-                .build();
-    }
-}
+//@Configuration
+//public class DatasourceConfig {
+//    @Bean
+//    public DataSource datasource() {
+//        return DataSourceBuilder.create()
+//                .driverClassName("com.mysql.cj.jdbc.Driver")
+//                .url("jdbc:mysql://localhost:3306/salesdb")
+//                .username("root")
+//                .password("")
+//                .build();
+//    }
+//}
