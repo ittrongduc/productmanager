@@ -27,11 +27,7 @@ public class FBController {
 
         try {
 
-            fbVideoService.getVideo(link, response.getOutputStream());
-
-            response.setContentType("video/mp4");
-            response.setHeader("Content-Disposition", "attachment;filename=downloadname.mp4");
-
+            fbVideoService.getVideo(link, response);
 
         } catch (Exception e) {
             e.printStackTrace();

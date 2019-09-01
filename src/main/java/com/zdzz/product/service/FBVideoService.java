@@ -2,9 +2,11 @@ package com.zdzz.product.service;
 
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Date;
 
 @Service
 public class FBVideoService {
@@ -37,8 +39,18 @@ public class FBVideoService {
         }
     }
 
-    public void getVideo(String url, OutputStream outputStream) {
+    public void getVideo(String url, HttpServletResponse response) {
         try {
+
+            Date date = new Date();
+
+            String fileName = String.valueOf(date.getTime());
+
+            response.setContentType("video/mp4");
+            response.setHeader("Content-Disposition", "attachment;filename="+fileName+".mp4");
+
+            OutputStream outputStream = response.getOutputStream();
+
             String temp = getURLSource(url);
             System.out.println(temp);
 
@@ -60,7 +72,6 @@ public class FBVideoService {
                 int bytesRead;
                 while ((bytesRead = in.read(dataBuffer, 0, 1024)) != -1) {
                     outputStream.write(dataBuffer, 0, bytesRead);
-
                 }
                 outputStream.flush();
                 outputStream.close();
