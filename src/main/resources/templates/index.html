@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
-    <title>Bootstrap 4 Website Example</title>
+    <title>FB Video Downloader</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -13,6 +13,7 @@
     height: 200px;
     background: #aaa;
   }
+
 
     </style>
 </head>
@@ -43,12 +44,17 @@
     <div class="row">
         <div class="col-sm-8">
             <h2>Put your link here!</h2>
-            <div class="fakeimg">Fake Image</div>
+            <form action="/video" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="_link" name="link">
+                </div>
+                <button type="submit" class="btn btn-primary">Download</button>
+            </form>
             <hr class="d-sm-none">
         </div>
         <div class="col-sm-4">
             <h2>How To</h2>
-            <div class="fakeimg">Fake Image</div>
+            <div class="fakeimg"></div>
             <br>
         </div>
     </div>
