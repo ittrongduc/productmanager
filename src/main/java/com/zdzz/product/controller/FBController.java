@@ -2,6 +2,7 @@ package com.zdzz.product.controller;
 
 import com.zdzz.product.service.FBVideoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,7 +12,7 @@ import org.thymeleaf.util.StringUtils;
 import javax.servlet.http.HttpServletResponse;
 import java.io.OutputStream;
 
-@RestController
+@Controller
 public class FBController {
 
     @Autowired
@@ -19,10 +20,10 @@ public class FBController {
 
     @RequestMapping(value = "/video", method = RequestMethod.POST,
             consumes = "application/x-www-form-urlencoded")
-    public OutputStream responseVideo(@RequestParam String link, HttpServletResponse response){
+    public String responseVideo(@RequestParam String link, HttpServletResponse response){
 
         if (StringUtils.isEmpty(link)){
-            return null;
+            return "index";
         }
 
         try {
@@ -33,7 +34,7 @@ public class FBController {
             e.printStackTrace();
         }
 
-        return null;
+        return "index";
     }
 
 }
