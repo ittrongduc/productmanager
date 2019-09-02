@@ -25,4 +25,16 @@ public class AppController {
         return "index";
     }
 
+    @RequestMapping("/downloaded")
+    public String viewDownloadedPage(Model model){
+
+        return "downloaded";
+    }
+
+    @RequestMapping("/about")
+    public String viewAbout(Model model){
+
+        return "about";
+    }
+
 }
