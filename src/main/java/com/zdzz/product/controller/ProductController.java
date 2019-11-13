@@ -1,24 +1,25 @@
 package com.zdzz.product.controller;
 
+import com.zdzz.product.model.Product;
 import com.zdzz.product.service.ProductDAO;
-import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Set;
+import java.util.List;
 
-@Controller
+@RestController
 public class ProductController {
 
     @Autowired
     private ProductDAO productDAO;
 
-    @RequestMapping(value = "/product/getAll", method = RequestMethod.GET)
-    public Set<Document> getAllProducts(){
+    @RequestMapping(value = "/asdasd", method = RequestMethod.GET)
+    public List<Product> getAllProducts(){
 
-        return productDAO.getAllProducts();
+        return productDAO.getAllProduct();
     }
 
 }
