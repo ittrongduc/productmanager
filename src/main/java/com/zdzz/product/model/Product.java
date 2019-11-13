@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Product {
 
     @Id
-    private ObjectId id;
+    private String id;
     private String name;
 
 
@@ -16,16 +16,16 @@ public class Product {
     public Product() {
     }
 
-    public Product(ObjectId id, String name) {
+    public Product(String id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public ObjectId getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(ObjectId id) {
+    public void setId(String id) {
         this.id = id;
     }
 
